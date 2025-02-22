@@ -9,9 +9,12 @@ namespace VShop.ProductAPI.DTO_s
         [Required]
         [MinLength(3)]
         [MaxLength(50)]
+
         public string? Name { get; set; }
+
         [Required]
         public decimal Price { get; set; }
+
         [MinLength(5)]
         [MaxLength(200)]
         public string? Description { get; set; }
