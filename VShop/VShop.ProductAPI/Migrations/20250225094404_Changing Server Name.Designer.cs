@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VShop.ProductAPI.ProductAPI_Context;
 
@@ -10,9 +11,11 @@ using VShop.ProductAPI.ProductAPI_Context;
 namespace VShop.ProductAPI.Migrations
 {
     [DbContext(typeof(ProductAPIContext))]
-    partial class ProductAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20250225094404_Changing Server Name")]
+    partial class ChangingServerName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

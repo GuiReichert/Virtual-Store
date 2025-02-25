@@ -26,7 +26,7 @@ namespace VShop.ProductAPI.Controllers
             return Ok(products);
         }
 
-        [HttpGet("{id:int}",Name = "GetProductById")]
+        [HttpGet("{id:int}", Name = "GetProductById")]
         public async Task<ActionResult<ProductDTO>> GetProductById(int id)
         {
             var product = await _productService.GetProductById(id);
@@ -41,7 +41,7 @@ namespace VShop.ProductAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<ProductDTO>> CreateProduct(ProductDTO productDTO)
         {
-            if(productDTO == null)
+            if (productDTO == null)
             {
                 return BadRequest("Invalid Data.");
             }
@@ -50,7 +50,7 @@ namespace VShop.ProductAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<ProductDTO>> UpdateProduct (ProductDTO productDTO)
+        public async Task<ActionResult<ProductDTO>> UpdateProduct(ProductDTO productDTO)
         {
             if (productDTO == null)
             {
